@@ -7,6 +7,12 @@ internal class program
     {
         Penjumlahan<int> pen = new Penjumlahan<int>();
         pen.JumlahTigaAngka(13, 02, 21);
+
+        SimpleDataBase<int> data = new SimpleDataBase<int>();
+        data.AddNewData(13);
+        data.AddNewData(02);
+        data.AddNewData(21);
+        data.PrintAllData();
     }
 }
 
@@ -47,6 +53,4 @@ public class Penjumlahan<T>
         }
     }
 }
-
-
 
