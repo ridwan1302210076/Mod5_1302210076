@@ -1,31 +1,36 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-internal class program
+namespace mod5
 {
-    private static void Main(string[] args)
-
+    internal class program
     {
-        Penjumlahan<int> pen = new Penjumlahan<int>();
-        pen.JumlahTigaAngka(13, 02, 21);
+        private static void Main(string[] args)
 
-        SimpleDataBase<int> data = new SimpleDataBase<int>();
-        data.AddNewData(13);
-        data.AddNewData(02);
-        data.AddNewData(21);
-        data.PrintAllData();
+        {
+            Penjumlahan<int> pen = new Penjumlahan<int>();
+            pen.JumlahTigaAngka(13, 02, 21);
+
+            SimpleDataBase<int> data = new SimpleDataBase<int>();
+            data.AddNewData(13);
+            data.AddNewData(02);
+            data.AddNewData(21);
+            data.PrintAllData();
+        }
     }
-}
 
-public class Penjumlahan<T>
-{
-    public void JumlahTigaAngka(T a, T b, T c)
-
+    public class Penjumlahan<T>
     {
-        dynamic aa = a;
-        dynamic bb = b;
-        dynamic cc = c;
-        Console.WriteLine(aa + bb + cc);
+        public void JumlahTigaAngka(T a, T b, T c)
+
+        {
+            dynamic aa = a;
+            dynamic bb = b;
+            dynamic cc = c;
+            Console.WriteLine(aa + bb + cc);
+        }
+
     }
+
     public class SimpleDataBase<T>
     {
         List<T> storedData { get; set; }
@@ -53,4 +58,3 @@ public class Penjumlahan<T>
         }
     }
 }
-
